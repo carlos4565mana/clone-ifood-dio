@@ -73,8 +73,8 @@ export const ButtonTipoSelect = styled.TouchableOpacity`
 export const TextTipoSelect = styled.Text`
 
   ${props => props.selected ? css`
-          font-weight: bold;
-          color: #F0001A
+    font-weight: bold;
+    color: #F0001A
   ` : css``}
 
 `
