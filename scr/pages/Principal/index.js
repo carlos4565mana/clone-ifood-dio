@@ -20,18 +20,15 @@ import RestauranteItem from '../../components/RestauranteItem'
 
 export default function Principal() {
 
-
   const [banners, setBanners] = useState([])
   const [categorias, setCategorias] = useState([])
   const [restaurantes, setRestaurantes] = useState([])
   const [loaded, setLoaded] = useState(false)
   const [tipo, setTipo] = useState('Entrega');
 
-
   useEffect(() => {
     async function buscaDados() {
       try {
-
         const response = await fetch('http://my-json-server.typicode.com/pablohdev/app-ifood-clone/db');
 
         const data = await response.json();
@@ -42,9 +39,7 @@ export default function Principal() {
         setCategorias(data.categorias);
         setRestaurantes(data.restaurantes);
       } catch (e) {
-
         Alert.alert('Erro consultada' + e);
-
       }
     }
 
